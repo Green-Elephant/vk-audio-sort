@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VK сортировка аудио</title>
+    <link rel="import" href="vendor/bower_components/webcomponentsjs/webcomponents-lite.js">
+    <link rel = "import" href="vendor/bower_components/paper-button/paper-button.html">
+    <link rel = "import" href="vendor/bower_components/paper-input/paper-input.html">
+    <link rel="import" href="vendor/bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="vendor/bower_components/iron-icon/iron-icon.html">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<paper-input label="Введите ваши правила сотрировки" value="ento ne robit, :peka:"></paper-input>
+
+<paper-button id = "sortButton"><iron-icon icon="check"></iron-icon>Сортировать</paper-button>
+<script>
+    const sort = async (e) =>{
+      sortByGroupFirstMatch();
+    };
+    const sortByGroupFirstMatch = async () =>{
+
+    };
+    const sortButton = document.getElementById('sortButton');
+    sortButton.addEventListener('click', sort);
+</script>
+</body>
+</html>

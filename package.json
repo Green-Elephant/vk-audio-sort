@@ -1,0 +1,10 @@
+{
+  "name": "VK-audio-extension",
+  "version": "0.0.1",
+  "dependencies": {
+    
+  },
+  "scripts": {
+    "build":"vulcanize pages/index.html --inline-scripts \\ | crisper --html build/index.html --js build/index.js"
+  }
+}

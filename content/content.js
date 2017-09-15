@@ -1,2 +1,1 @@
-window["age-verification-container"].remove();
-window["age-verification-wrapper"].remove();
+chrome.runtime.sendMessage()

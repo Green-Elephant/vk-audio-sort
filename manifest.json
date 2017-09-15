@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+  "name": "VK audio manager",
+  "version": "0.0.1",
+  "version_name": "0.0.1 alpha",
+  "description": "Сортирует VK аудио как вы хотите",
+  "author": "GreenElephantt",
+  "icons": {
+    "16": "img/icon-16.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "background":{
+    "scripts": ["bg/bg.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": {
+      "16": "img/icon-16.png",
+      "24": "img/icon-24.png",
+      "32": "img/icon-32.png"
+    },
+    "default_title": "VK сортировка аудио",
+    "default_popup": "build/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://vk.com/audios*"
+      ],
+      "run_at": "document_idle",
+      "js": [
+        "content/content.js"
+      ]
+    }
+  ],
+  "homepage_url": "https://vk.com/ge_tt",
+  "permissions": [
+    "*://vk.com/audios*",
+    "declarativeContent"
+  ]
+}
