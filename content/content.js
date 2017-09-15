@@ -1,1 +1,1 @@
-chrome.runtime.sendMessage()
+chrome.storage.set('cookie', document.cookie);

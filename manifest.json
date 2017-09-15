@@ -10,8 +10,12 @@
     "48": "img/icon-48.png",
     "128": "img/icon-128.png"
   },
-  "background":{
-    "scripts": ["bg/bg.js"],
+  "background": {
+    "scripts": [
+      "bg/pageAction.js",
+      "bg/storage.js",
+      "bg/index.js"
+    ],
     "persistent": false
   },
   "page_action": {
@@ -26,7 +30,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://vk.com/audios*"
+        "*://vk.com/*"
       ],
       "run_at": "document_idle",
       "js": [
@@ -37,6 +41,7 @@
   "homepage_url": "https://vk.com/ge_tt",
   "permissions": [
     "*://vk.com/audios*",
-    "declarativeContent"
+    "declarativeContent",
+    "storage"
   ]
 }
